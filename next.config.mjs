@@ -2,7 +2,7 @@
 const nextConfig = {
     output: 'export',
 
-    basePath: '/alpha-beta_visualization',
+    basePath: '/alpha-beta-visualization',
 
     images: {
         unoptimized: true,
