@@ -5,9 +5,9 @@ It will render TreeVisualization and Sidebar components.
 */
 
 import React from 'react';
-import { TreeProvider } from '../utils/TreeContext';
-import TreeVisualization from '../components/TreeVisualization';
-import Sidebar from '../components/Sidebar';
+import { TreeProvider } from './static/utils/TreeContext';
+import TreeVisualization from './static/components/TreeVisualization';
+import Sidebar from './static/components/Sidebar';
 // import './styles.css';
 
 export default function Home() {

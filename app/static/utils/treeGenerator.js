@@ -1,3 +1,4 @@
+'use client';
 /*
 Utility function to generate a random tree. 
 This function will be used in TreeContext to create initial tree data 

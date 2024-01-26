@@ -81,14 +81,38 @@ const TreeVisualization = () => {
     };
   }, [contextMenu.visible]); // Dependency array ensures this effect runs when the visibility changes
 
-  const svgRef = useRef();
-  let width = 800;
-  let height = 800;
-  if (typeof window !== "undefined") {
-    width = window.innerWidth - 400; // may need to adjust
-    height = window.innerHeight - 400; // may need to adjust
-  }
 
+// OLD HEIGHT AND WIDTH:
+  // const svgRef = useRef();
+  // let width = 800;
+  // let height = 800;
+  // if (typeof window !== "undefined") {
+  //   width = window.innerWidth - 400; // may need to adjust
+  //   height = window.innerHeight - 400; // may need to adjust
+  // }
+
+// NEW:
+  const [dimensions, setDimensions] = useState({ width: 800, height: 400 });
+
+  useEffect(() => {
+    // Calculate and update width and height based on the window size
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth - 400,
+        height: window.innerHeight - 400
+      });
+    };
+
+    window.addEventListener('resize', updateDimensions);
+    updateDimensions();  // Initial update
+
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    };
+  }, []);
+
+  const svgRef = useRef();
+  
   useEffect(() => {
     if (!treeData) return;
 
@@ -101,7 +125,7 @@ const TreeVisualization = () => {
     svg.selectAll("*").remove();
 
     // Set up the tree layout
-    const treeLayout = d3.tree().size([width, height]);
+    const treeLayout = d3.tree().size([dimensions.width, dimensions.height]);
     const root = d3.hierarchy(treeData, (d) => d.children);
 
     // Assigns the x and y position for the nodes
@@ -210,8 +234,8 @@ const TreeVisualization = () => {
     <>
       <svg
         ref={svgRef}
-        width={width}
-        height={height}
+        width={dimensions.width}
+        height={dimensions.height}
         className="tree-visualization"
       ></svg>
       {contextMenu.visible && (
