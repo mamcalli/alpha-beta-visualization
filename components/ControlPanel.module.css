@@ -1,0 +1,110 @@
+
+/* Blue, Rounded, main action button */
+.button {
+  /* background-color: #007bff; */
+  background-color: #1E90FF;
+  /* background-color: #555555;  */
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #166fc8;
+  border: 2px solid #1E90FF;
+}
+
+.generateButton {
+  background-color: #f39c12;
+  /* background-color: #555555;  */
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.generateButton:hover {
+  background-color: transparent;
+  color: #d48911;
+  border: 2px solid #f39c12;
+}
+
+/* Flex container for step control buttons */
+.stepControls {
+  display: flex;
+  justify-content: center;
+  color: #28a745;
+  /* Center the buttons horizontally */
+  align-items: center;
+  /* Align the buttons vertically */
+  margin-top: 6px;
+}
+
+.stepButton {
+  background-color: #80bfff;
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.stepButton:hover {
+  background-color: transparent;
+  color: #699fd4;
+  border: 2px solid #80bfff;
+}
+
+.nextButton {
+  background-color: #80bfff;
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+
+}
+
+.prevButton {
+  background-color: #80bfff;
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Styles for the slider container */
+.sliderContainer {
+  margin: 10px 0;
+}
+
+.sliderContainer label {
+  display: block;
+  /* Ensure the label is on its own line */
+  margin-bottom: 5px;
+}
