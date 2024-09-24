@@ -1,4 +1,9 @@
 
+.button, .generateButton {
+  margin: 5px 0;
+  /* other properties remain the same */
+}
+
 /* Blue, Rounded, main action button */
 .button {
   /* background-color: #007bff; */
@@ -42,14 +47,21 @@
 }
 
 /* Flex container for step control buttons */
-.stepControls {
+/* .stepControls {
   display: flex;
   justify-content: center;
   color: #28a745;
-  /* Center the buttons horizontally */
   align-items: center;
-  /* Align the buttons vertically */
   margin-top: 6px;
+} */
+
+.stepControls {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  flex-wrap: wrap;
 }
 
 .stepButton {

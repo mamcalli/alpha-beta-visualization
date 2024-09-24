@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-
-    basePath: '/alpha-beta-visualization',
-
+    basePath: process.env.NODE_ENV === 'production' ? '/alpha-beta-viz' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/alpha-beta-viz' : '',
     images: {
-        unoptimized: true,
-      },
+      unoptimized: true,
+    },
 };
 
 export default nextConfig;

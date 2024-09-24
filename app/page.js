@@ -8,15 +8,14 @@ import React from 'react';
 import { TreeProvider } from './static/utils/TreeContext';
 import TreeVisualization from './static/components/TreeVisualization';
 import Sidebar from './static/components/Sidebar';
-// import './styles.css';
 
 export default function Home() {
   return (
     <TreeProvider>
-      <div className="app-container">
+      <main className="app-container">
         <TreeVisualization />
         <Sidebar />
-      </div>
+      </main>
     </TreeProvider>
   );
 }
