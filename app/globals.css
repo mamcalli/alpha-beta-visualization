@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -63,12 +59,39 @@ body {
   /* for tree diagram to fill all available space except for the sidebar */
 }
 
+/* .sidebar {
+  background-color: #f0f0f0;
+  width: 300px;  /* fixed width, may change to flex? 
+  padding: 20px;
+  /*  hieght: 100%;
+} */
+
 .sidebar {
   background-color: #f0f0f0;
-  width: 300px;  /* fixed width, may change to flex? */
+  width: 300px;
   padding: 20px;
-  /*  hieght: 100%;*/
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
 }
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.information {
+  position: sticky;
+  bottom: 0;
+  background-color: #f0f0f0;
+  color: #949494;
+  padding: 10px;
+  text-align: left;
+  font-size: 13px;
+  margin-top: auto;
+}
+
 
 .tree-visualization {
   /* allows the tree visualization to expand and take up all available space */
