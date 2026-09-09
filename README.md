@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alpha-Beta Pruning Visualization
 
-## Getting Started
+An interactive web application for visualizing how the alpha-beta pruning algorithm evaluates a minimax tree.
 
-First, run the development server:
+[View the live demo](https://mamcalli.github.io/alpha-beta-visualization/)
+
+## Features
+
+- Step through the alpha-beta pruning algorithm
+- Track the current alpha and beta values
+- Move forward and backward through each step
+- Generate random trees with adjustable depth
+- Edit, delete, or add nodes using the right-click menu
+- See which branches are skipped by pruning
+
+## How to Use
+
+1. Select the desired tree depth.
+2. Click **Generate New Tree** to create a tree.
+3. Click **Run Alpha-Beta** to execute the algorithm.
+4. Use **Previous** and **Next** to explore each step.
+5. Right-click a node to edit it, delete it, or add a child.
+
+## Running Locally
+
+Clone the repository and install its dependencies:
 
 ```bash
+git clone https://github.com/mamcalli/alpha-beta-visualization.git
+cd alpha-beta-visualization
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
