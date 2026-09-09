@@ -17,9 +17,10 @@ An interactive web application for visualizing how the alpha-beta pruning algori
 
 1. Select the desired tree depth.
 2. Click **Generate New Tree** to create a tree.
-3. Click **Run Alpha-Beta** to execute the algorithm.
-4. Use **Previous** and **Next** to explore each step.
-5. Right-click a node to edit it, delete it, or add a child.
+3. Manually adjust the tree by right-clicking a node to edit it, delete it, or add a child.
+4. Click **Run Alpha-Beta** to execute the algorithm.
+5. Use **Previous** and **Next** to explore each step.
+
 
 ## Running Locally
 
